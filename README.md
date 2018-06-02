@@ -2,10 +2,6 @@
 
 ## CLI to manipulates Elasticbeanstalk environmnet variables for all environments at once
 
-### Requirements
-
-AWS eb cli installed
-
 ### Setup
 
 All you need is a valid AWS config file in place
@@ -16,12 +12,9 @@ All you need is a valid AWS config file in place
 # set the AWS region
 export AWS_DEFAULT_REGION=sa-east-1
 
-# Download and extract ebscan
-wget https://github.com/pismo/ebscan/releases/download/v0.1.2/ebscan_0.1.2_Tux_64-bit.tar.gz
-tar -zxvf ebscan_0.1.2_Tux_64-bit.tar.gz
-
-# Add execution permission to the app
-chmod +x ebscan_0.1.2_Tux_64-bit/ebscan
+# Homebrew install
+brew tap pismo/homebrew-ebscan
+brew install homebrew-ebscan
 ```
 
 ### Usage
@@ -29,7 +22,7 @@ chmod +x ebscan_0.1.2_Tux_64-bit/ebscan
 #### List current environments using a variable containing some string
 
 ```
-./ebscan \
+homebrew-ebscan \
     -contains http://current.value.you.are.looking.for
 ```
 
@@ -38,7 +31,7 @@ chmod +x ebscan_0.1.2_Tux_64-bit/ebscan
 
 
 ```
-./ebscan \
+homebrew-ebscan \
     -contains http://current.value.you.are.looking.for \
     -set VAR_NAME \
     -to http://current.value.you.are.looking.for
