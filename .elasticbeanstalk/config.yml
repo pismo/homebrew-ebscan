@@ -1,0 +1,7 @@
+branch-defaults:
+  master:
+    environment: appenvironment
+global:
+  application_name: appname
+  default_region: sa-east-1
+  profile: null
