@@ -1,7 +1,7 @@
 # .goreleaser.yml
 # Build customization
 builds:
-  - binary: ebscan
+  - binary: homebrew-ebscan
     goos:
       - windows
       - darwin
@@ -21,7 +21,7 @@ archive:
 brew:
   # Name of the recipe
   # Default to project name
-  name: ebscan
+  name: homebrew-ebscan
 
   # Reporitory to push the tap to.
   github:
@@ -44,7 +44,7 @@ brew:
 
   # Caveats for the user of your binary.
   # Default is empty.
-  caveats: "ebscan -contains `substring-in-env-var`"
+  caveats: "homebrew-ebscan -contains `substring-in-env-var`"
 
   # Your app's homepage.
   # Default is empty.
